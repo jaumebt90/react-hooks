@@ -1,4 +1,4 @@
-import { useState, Component } from "react";
+import { useState } from "react";
 
 // Reglas de los hooks:
 // no se llaman en loops, ni condiciones, ni while ni nada
@@ -23,12 +23,25 @@ import { useState, Component } from "react";
   }
 } */
 
-const App = () => {
+/* const App = () => {
   const [contador, setContador] = useState(0);
   return (
     <div>
       Contador:{contador}
       <button onClick={() => setContador(contador + 1)}>Incrementar</button>
+    </div>
+  );
+}; */
+
+const App = () => {
+  const [contador, setContador] = useState(0);
+  const incrementar = () => {
+    setContador(contador + 1);
+  };
+  return (
+    <div>
+      Contador:{contador}
+      <button onClick={incrementar}>Incrementar</button>
     </div>
   );
 };
