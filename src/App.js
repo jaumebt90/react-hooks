@@ -7,6 +7,11 @@ const useContador = (inicial) => {
   };
   return [contador, incrementar];
 };
+
+const Interval = ({ contador }) => {
+  useEffect(() => {}, []);
+};
+
 const App = () => {
   const [contador, incrementar] = useContador(0);
   useEffect(() => {
