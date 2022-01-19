@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, Component } from "react";
 
 // Reglas de los hooks:
 // no se llaman en loops, ni condiciones, ni while ni nada
@@ -7,6 +7,21 @@ import { useState } from "react";
 //Componentes de React
 //Custom hooks
 //cuando creemos un custom hook use*
+
+/* class App extends Component {
+  state = { contador: 0 };
+  incrementar = () => {
+    this.setState({ contador: this.state.contador + 1 });
+  };
+  render() {
+    return (
+      <div>
+        Contador:{this.state.contador}
+        <button onClick={this.incrementar}>Incrementar</button>
+      </div>
+    );
+  }
+} */
 
 const App = () => {
   const [contador, setContador] = useState(0);
