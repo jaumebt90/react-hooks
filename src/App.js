@@ -9,7 +9,10 @@ const useContador = (inicial) => {
 };
 
 const Interval = ({ contador }) => {
-  useEffect(() => {}, []);
+  useEffect(() => {
+    setInterval(() => console.log(contador), 1000);
+  }, [contador]);
+  return <p>Intervalo</p>;
 };
 
 const App = () => {
@@ -22,6 +25,7 @@ const App = () => {
     <div>
       Contador:{contador}
       <button onClick={incrementar}>Incrementar</button>
+      <Interval contador={contador} />
     </div>
   );
 };
