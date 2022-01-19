@@ -9,6 +9,10 @@ const useContador = (inicial) => {
 };
 const App = () => {
   const [contador, incrementar] = useContador(0);
+  useEffect(() => {
+    document.title = contador;
+    //console.log("soy un efecto");
+  }, [contador]);
   return (
     <div>
       Contador:{contador}
