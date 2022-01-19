@@ -10,7 +10,8 @@ const useContador = (inicial) => {
 
 const Interval = ({ contador }) => {
   useEffect(() => {
-    setInterval(() => console.log(contador), 1000);
+    const i = setInterval(() => console.log(contador), 1000);
+    return () => clearInterval(i);
   }, [contador]);
   return <p>Intervalo</p>;
 };
